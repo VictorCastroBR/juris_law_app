@@ -11,14 +11,14 @@ class _LoginViewState extends State<LoginView> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: Text('Login'),
+        centerTitle: true,
+        backgroundColor: Color.fromARGB(255, 65, 121, 100),
+      ),
+      backgroundColor: Color(0xFF7AAA98),
+      //CORPO
       body: Container(
-        padding: EdgeInsets.symmetric(horizontal: 50, vertical:30),
-        decoration: BoxDecoration(
-          gradient: LinearGradient(
-              begin: Alignment.topCenter,
-              end: Alignment.bottomCenter,
-              colors: [Color(0xFF7AAA98), Color(0xFF7AAA98)]),
-        ),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -84,21 +84,20 @@ class _LoginViewState extends State<LoginView> {
                 ),
               ),
               Padding(
-                padding: EdgeInsets.only(button: 10)
-              ),
-              GestureDetector(
-                onTap: (),
-                child: Text(
-                "Esqueceu a senha?",
-                style: TextStyle(
-                  color: Colors.white, 
-                  fontSize: 12),
-                textAlign: TextAlign.right,
-              ),
-            ),
+                padding: EdgeInsets.only(bottom: 10)
+                ),
+                GestureDetector(
+                  child: Text(
+                  "Esqueceu a senha?",
+                  style: TextStyle(
+                    color: Colors.white, 
+                    fontSize: 12),
+                  textAlign: TextAlign.right,
+                ),
+                ),
           ],
           ),
         ),
-      );
+       );
     }
   }

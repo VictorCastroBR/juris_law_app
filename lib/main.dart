@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:juris_law_app/view/cadastro.dart';
 import 'package:juris_law_app/view/login.dart';
 
 void main() {
