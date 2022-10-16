@@ -1,6 +1,7 @@
 import 'dart:html';
 
 import 'package:flutter/material.dart';
+import 'package:juris_law_app/view/cadastro.dart';
 
 class LoginView extends StatefulWidget {
   @override
@@ -33,71 +34,71 @@ class _LoginViewState extends State<LoginView> {
               ),
             ),
             Form(
-              child: Column(
-                children: [
-                  TextFormField(
-                    autofocus: true, 
-                    decoration: InputDecoration(
-                      labelText: "E-mail",
-                      labelStyle: TextStyle(
+              child: Column(children: [
+                TextFormField(
+                  autofocus: true,
+                  decoration: InputDecoration(
+                    labelText: "E-mail",
+                    labelStyle: TextStyle(
+                      color: Colors.white,
+                    ),
+                    prefixIcon: Icon(
+                      Icons.mail_outline,
+                      color: Colors.white,
+                    ),
+                    border: UnderlineInputBorder(
+                      borderSide: BorderSide(
                         color: Colors.white,
                       ),
-                      prefixIcon: Icon (
-                        Icons.mail_outline,
-                        color: Colors.white,
-                        ),
-                        border: UnderlineInputBorder(
-                          borderSide: BorderSide(
-                            color: Colors.white,
-                            ),
-                        ),
-                        focusedBorder: UnderlineInputBorder(
-                        borderSide: BorderSide(
-                          color: Colors.white,
-                            ),
-                          ),
-                        ),
-                      ),
-                      TextFormField(
-                    decoration: InputDecoration(
-                      labelText: "Senha",
-                      labelStyle: TextStyle(
+                    ),
+                    focusedBorder: UnderlineInputBorder(
+                      borderSide: BorderSide(
                         color: Colors.white,
                       ),
-                      prefixIcon: Icon (
-                        Icons.key,
-                        color: Colors.white,
-                        ),
-                        border: UnderlineInputBorder(
-                          borderSide: BorderSide(
-                            color: Colors.white,
-                            ),
-                        ),
-                        focusedBorder: UnderlineInputBorder(
-                        borderSide: BorderSide(
-                          color: Colors.white,
-                            ),
-                          ),
-                        ),
-                      ),
-                    ]   
+                    ),
+                  ),
                 ),
+                TextFormField(
+                  decoration: InputDecoration(
+                    labelText: "Senha",
+                    labelStyle: TextStyle(
+                      color: Colors.white,
+                    ),
+                    prefixIcon: Icon(
+                      Icons.key,
+                      color: Colors.white,
+                    ),
+                    border: UnderlineInputBorder(
+                      borderSide: BorderSide(
+                        color: Colors.white,
+                      ),
+                    ),
+                    focusedBorder: UnderlineInputBorder(
+                      borderSide: BorderSide(
+                        color: Colors.white,
+                      ),
+                    ),
+                  ),
+                ),
+              ]),
+            ),
+            Padding(padding: EdgeInsets.only(bottom: 10)),
+            GestureDetector(
+              onTap: () {
+                Navigator.of(context).push(
+                    MaterialPageRoute(builder: (context) => CadastroView()));
+              },
+              child: Text(
+                "Esqueceu a senha?",
+                style: TextStyle(color: Colors.white, fontSize: 12),
+                textAlign: TextAlign.right,
               ),
-              Padding(
-                padding: EdgeInsets.only(bottom: 10)
-                ),
-                GestureDetector(
-                  child: Text(
-                  "Esqueceu a senha?",
-                  style: TextStyle(
-                    color: Colors.white, 
-                    fontSize: 12),
-                  textAlign: TextAlign.right,
-                ),
-                ),
+            ),
+            SizedBox(height: 30),
+            RaisedButton(child: Text('Fazer Login'), onPressed: () {})
           ],
-          ),
         ),
-       );
-    }
+      ),
+    );
   }
+}

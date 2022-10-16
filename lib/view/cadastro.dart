@@ -1,5 +1,4 @@
 import 'dart:html';
-
 import 'package:flutter/material.dart';
 
 class CadastroView extends StatefulWidget {
@@ -33,82 +32,80 @@ class _CadastroViewState extends State<CadastroView> {
               ),
             ),
             Form(
-              child: Column(
-                children: [
-                  TextFormField(
-                    autofocus: true, 
-                    decoration: InputDecoration(
-                      labelText: "Nome",
-                      labelStyle: TextStyle(
+              child: Column(children: [
+                TextFormField(
+                  autofocus: true,
+                  decoration: InputDecoration(
+                    labelText: "Nome",
+                    labelStyle: TextStyle(
+                      color: Colors.white,
+                    ),
+                    prefixIcon: Icon(
+                      Icons.person_outline,
+                      color: Colors.white,
+                    ),
+                    border: UnderlineInputBorder(
+                      borderSide: BorderSide(
                         color: Colors.white,
                       ),
-                      prefixIcon: Icon (
-                        Icons.person_outline
-                        color: Colors.white,
-                        ),
-                        border: UnderlineInputBorder(
-                          borderSide: BorderSide(
-                            color: Colors.white,
-                            ),
-                        ),
-                        focusedBorder: UnderlineInputBorder(
-                        borderSide: BorderSide(
-                          color: Colors.white,
-                            ),
-                          ),
-                        ),
-                      ),
-                  TextFormField(
-                    autofocus: true, 
-                    decoration: InputDecoration(
-                      labelText: "E-mail",
-                      labelStyle: TextStyle(
+                    ),
+                    focusedBorder: UnderlineInputBorder(
+                      borderSide: BorderSide(
                         color: Colors.white,
                       ),
-                      prefixIcon: Icon (
-                        Icons.mail_outline,
-                        color: Colors.white,
-                        ),
-                        border: UnderlineInputBorder(
-                          borderSide: BorderSide(
-                            color: Colors.white,
-                            ),
-                        ),
-                        focusedBorder: UnderlineInputBorder(
-                        borderSide: BorderSide(
-                          color: Colors.white,
-                            ),
-                          ),
-                        ),
-                      ),
-                      TextFormField(
-                    decoration: InputDecoration(
-                      labelText: "Senha",
-                      labelStyle: TextStyle(
-                        color: Colors.white,
-                      ),
-                      prefixIcon: Icon (
-                        Icons.key,
-                        color: Colors.white,
-                        ),
-                        border: UnderlineInputBorder(
-                          borderSide: BorderSide(
-                            color: Colors.white,
-                            ),
-                        ),
-                        focusedBorder: UnderlineInputBorder(
-                        borderSide: BorderSide(
-                          color: Colors.white,
-                            ),
-                          ),
-                        ),
-                      ),
-                    ]   
+                    ),
+                  ),
                 ),
-              ),
+                TextFormField(
+                  autofocus: true,
+                  decoration: InputDecoration(
+                    labelText: "E-mail",
+                    labelStyle: TextStyle(
+                      color: Colors.white,
+                    ),
+                    prefixIcon: Icon(
+                      Icons.mail_outline,
+                      color: Colors.white,
+                    ),
+                    border: UnderlineInputBorder(
+                      borderSide: BorderSide(
+                        color: Colors.white,
+                      ),
+                    ),
+                    focusedBorder: UnderlineInputBorder(
+                      borderSide: BorderSide(
+                        color: Colors.white,
+                      ),
+                    ),
+                  ),
+                ),
+                TextFormField(
+                  decoration: InputDecoration(
+                    labelText: "Senha",
+                    labelStyle: TextStyle(
+                      color: Colors.white,
+                    ),
+                    prefixIcon: Icon(
+                      Icons.key,
+                      color: Colors.white,
+                    ),
+                    border: UnderlineInputBorder(
+                      borderSide: BorderSide(
+                        color: Colors.white,
+                      ),
+                    ),
+                    focusedBorder: UnderlineInputBorder(
+                      borderSide: BorderSide(
+                        color: Colors.white,
+                      ),
+                    ),
+                  ),
+                ),
+              ]),
+            ),
           ],
-          ),
         ),
-       );
-    }
+      ),
+    );
   }
+}
