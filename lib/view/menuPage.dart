@@ -20,7 +20,39 @@ class MenuPageState extends State<MenuPage> {
       ),
       body: Container(
         child: Column(
-          children: [Text('Teste')],
+          children: [
+            Row(
+              children: [
+                ClipOval(
+                  child: Container(
+                    width: 100,
+                    height: 100,
+                    child: Image.asset(
+                      'lib/src/images/henrycavill.jpg',
+                    ),
+                  ),
+                ),
+                Text('Admin')
+              ],
+            ),
+            ExpansionPanelList(
+              expansionCallback: (int index, bool isExpanded) {},
+              children: [
+                ExpansionPanel(
+                  headerBuilder: (BuildContext context, bool isExpanded) {
+                    return ListTile(
+                      title: Text('Áreas de Interesse'),
+                    );
+                  },
+                  body: ListTile(
+                    title: Text('Teste'),
+                    subtitle: Text('Subtext'),
+                  ),
+                  isExpanded: true,
+                ),
+              ],
+            ),
+          ],
         ),
       ),
     );

@@ -4,7 +4,7 @@ import 'package:juris_law_app/view/cadastro.dart';
 import 'package:juris_law_app/view/login.dart';
 
 import '../view/AboutPage.dart';
-import '../view/menuPage.dart';
+import '../view/MenuPage.dart';
 
 class AppMainWidget extends StatelessWidget {
   @override
