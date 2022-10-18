@@ -85,8 +85,7 @@ class _LoginViewState extends State<LoginView> {
             Padding(padding: EdgeInsets.only(bottom: 10)),
             GestureDetector(
               onTap: () {
-                Navigator.of(context).push(
-                    MaterialPageRoute(builder: (context) => CadastroView()));
+                Navigator.of(context).pushNamed('/cadastro');
               },
               child: Text(
                 "Esqueceu a senha?",
@@ -95,7 +94,11 @@ class _LoginViewState extends State<LoginView> {
               ),
             ),
             SizedBox(height: 30),
-            RaisedButton(child: Text('Fazer Login'), onPressed: () {})
+            RaisedButton(
+                child: Text('Fazer Login'),
+                onPressed: () {
+                  Navigator.of(context).pushReplacementNamed('/menu');
+                })
           ],
         ),
       ),
