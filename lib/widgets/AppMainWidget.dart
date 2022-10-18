@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:juris_law_app/view/AddMemberPage.dart';
 import 'package:juris_law_app/view/cadastro.dart';
 import 'package:juris_law_app/view/login.dart';
 
@@ -10,6 +11,7 @@ class AppMainWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Juris Law',
       theme: ThemeData(
         primarySwatch: Colors.blue,
@@ -20,6 +22,7 @@ class AppMainWidget extends StatelessWidget {
         '/cadastro': (context) => CadastroView(),
         '/menu': (context) => MenuPage(),
         '/sobre': (context) => AboutPage(),
+        '/adicionar-membro': (context) => AddMemberPage()
       },
     );
   }
