@@ -1,26 +1,30 @@
+import 'dart:html';
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 import '../widgets/MenuAppBar.dart';
 
-class MenuPage extends StatefulWidget {
+class AboutPage extends StatefulWidget {
   @override
-  State<MenuPage> createState() {
-    return MenuPageState();
+  State<AboutPage> createState() {
+    return AboutPageState();
   }
 }
 
-class MenuPageState extends State<MenuPage> {
+class AboutPageState extends State<AboutPage> {
   @override
-  Widget build(Object context) {
+  Widget build(BuildContext context) {
     return Scaffold(
       drawer: MenuAppBar(),
       appBar: AppBar(
-        title: Text('JurisLaw'),
+        title: Text(
+          'Sobre nos',
+        ),
       ),
       body: Container(
         child: Column(
-          children: [Text('Teste')],
+          children: [Text('Vivi')],
         ),
       ),
     );

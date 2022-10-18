@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:juris_law_app/view/cadastro.dart';
 import 'package:juris_law_app/view/login.dart';
 
+import '../view/AboutPage.dart';
 import '../view/menuPage.dart';
 
 class AppMainWidget extends StatelessWidget {
@@ -18,6 +19,7 @@ class AppMainWidget extends StatelessWidget {
         '/': (context) => LoginView(),
         '/cadastro': (context) => CadastroView(),
         '/menu': (context) => MenuPage(),
+        '/sobre': (context) => AboutPage(),
       },
     );
   }
