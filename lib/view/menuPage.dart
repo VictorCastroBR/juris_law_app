@@ -151,7 +151,7 @@ class DivTeamWidget extends StatelessWidget {
         ),
         ProfileMember(
           name: 'Gabriela',
-          occupation: 'Vagabunda',
+          occupation: 'Assistente jurídico',
         ),
         ProfileMember(name: 'Bia'),
         ProfileMember(
