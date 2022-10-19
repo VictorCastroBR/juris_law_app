@@ -14,6 +14,7 @@ class AddMemberPageState extends State<AddMemberPage> {
     return Scaffold(
       appBar: AppBar(
         title: Text('Adicionar membro a equipe'),
+        backgroundColor: Color.fromARGB(255, 65, 121, 100),
       ),
       body: Column(
         children: [Text('Adicionar novos membros')],

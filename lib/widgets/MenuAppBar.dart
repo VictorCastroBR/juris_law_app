@@ -5,8 +5,10 @@ class MenuAppBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Drawer(
-      child: Column(children: [
+      child: Column(
+        children: [
         UserAccountsDrawerHeader(
+          decoration: BoxDecoration(color: Color.fromARGB(255, 140, 228, 185)),
           currentAccountPicture: ClipOval(
             child: Container(color: Colors.white),
           ),

@@ -18,6 +18,7 @@ class MenuPageState extends State<MenuPage> {
       drawer: MenuAppBar(),
       appBar: AppBar(
         title: Text('JurisLaw'),
+        backgroundColor: Color.fromARGB(255, 65, 121, 100),
       ),
       body: ListView(
         children: [
