@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 import '../widgets/MenuAppBar.dart';
+import '../widgets/ProfileMember.dart';
 
 class MenuPage extends StatefulWidget {
   @override
@@ -34,27 +35,40 @@ class MenuPageState extends State<MenuPage> {
 class UserHeader extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Row(
-      children: [
-        ClipOval(
-          child: Container(
-            width: 100.0,
-            height: 100.0,
-            child: Image.asset(
-              'lib/src/images/henrycavill.jpg',
+    return Padding(
+      padding: EdgeInsets.only(top: 30.0),
+      child: Row(
+        children: [
+          Padding(
+            padding: EdgeInsets.only(left: 30.0),
+            child: ClipOval(
+              child: Container(
+                width: 100.0,
+                height: 100.0,
+                child: Image.asset(
+                  'lib/src/images/henrycavill.jpg',
+                ),
+              ),
             ),
           ),
-        ),
-        Padding(
-          padding: EdgeInsets.only(left: 20.0),
-          child: Column(
-            children: [
-              Text('Admin'),
-              Text('Escritório'),
-            ],
-          ),
-        )
-      ],
+          Padding(
+            padding: EdgeInsets.only(left: 20.0),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.start,
+              children: [
+                Text(
+                  'Admin',
+                  style: TextStyle(fontSize: 20.0),
+                ),
+                Text(
+                  'Adminaaa',
+                  style: TextStyle(fontSize: 20.0),
+                ),
+              ],
+            ),
+          )
+        ],
+      ),
     );
   }
 }
@@ -125,7 +139,25 @@ class DivTeamWidget extends StatelessWidget {
               labelText: 'Pesquisar por',
             ),
           ),
-        )
+        ),
+        Container(height: 30),
+        ProfileMember(
+          name: 'Victor',
+          occupation: 'Lindo',
+        ),
+        ProfileMember(
+          name: 'Viviane',
+          occupation: 'Advogada Civil',
+        ),
+        ProfileMember(
+          name: 'Gabriela',
+          occupation: 'Vagabunda',
+        ),
+        ProfileMember(name: 'Bia'),
+        ProfileMember(
+          name: 'José',
+          occupation: 'Estagiário',
+        ),
       ],
     );
   }
