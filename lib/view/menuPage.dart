@@ -21,8 +21,9 @@ class MenuPageState extends State<MenuPage> {
       ),
       body: ListView(
         children: [
+          Container(height: 10),
           UserHeader(),
-          Container(height: 30),
+          Container(height: 10),
           ExpansionAreaWidget(),
           Container(height: 30),
           DivTeamWidget(),
@@ -35,40 +36,16 @@ class MenuPageState extends State<MenuPage> {
 class UserHeader extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: EdgeInsets.only(top: 30.0),
-      child: Row(
-        children: [
-          Padding(
-            padding: EdgeInsets.only(left: 30.0),
-            child: ClipOval(
-              child: Container(
-                width: 100.0,
-                height: 100.0,
-                child: Image.asset(
-                  'lib/src/images/henrycavill.jpg',
-                ),
-              ),
-            ),
-          ),
-          Padding(
-            padding: EdgeInsets.only(left: 20.0),
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.start,
-              children: [
-                Text(
-                  'Admin',
-                  style: TextStyle(fontSize: 20.0),
-                ),
-                Text(
-                  'Adminaaa',
-                  style: TextStyle(fontSize: 20.0),
-                ),
-              ],
-            ),
-          )
-        ],
+    return ListTile(
+      leading: CircleAvatar(
+        radius: 30.0,
+        backgroundColor: Colors.blue[100],
+        backgroundImage: NetworkImage(
+          'https://cdn4.iconfinder.com/data/icons/small-n-flat/24/user-512.png',
+        ),
       ),
+      title: Text('Admin'),
+      subtitle: Text('admin@gmail.com'),
     );
   }
 }
