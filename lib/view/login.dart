@@ -21,10 +21,9 @@ class _LoginViewState extends State<LoginView> {
       //CORPO
       body: Container(
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
-            Image.asset("lib/src/images/logo.png"),
+            Container(width: 250, height: 250, child: Image.asset("logo.png")),
             Text(
               "Entrar",
               textAlign: TextAlign.center,
