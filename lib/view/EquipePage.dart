@@ -17,7 +17,7 @@ class EquipePageState extends State<EquipePage> {
     return Scaffold(
       drawer: MenuAppBar(),
       appBar: AppBar(
-        title: Text('JurisLaw'),
+        title: Text('Equipe'),
         backgroundColor: Color.fromARGB(255, 65, 121, 100),
       ),
       body: ListView(

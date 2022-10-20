@@ -16,7 +16,7 @@ class PesquisaPageState extends State<PesquisaPage> {
     return Scaffold(
       drawer: MenuAppBar(),
       appBar: AppBar(
-        title: Text('JurisLaw'),
+        title: Text('Pesquisa Jurisprudencial'),
         backgroundColor: Color.fromARGB(255, 65, 121, 100),
       ),
       body: ListView(
@@ -38,7 +38,7 @@ class DivPesqWidget extends StatelessWidget {
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Text('a'),
+              Text(''),
             ],
           ),
         ),
@@ -90,7 +90,7 @@ class DivPesqWidget extends StatelessWidget {
         RaisedButton(
             child: Text('Pesquisar'),
             onPressed: () {
-              Navigator.of(context).pushReplacementNamed('/');
+              Navigator.of(context).pushReplacementNamed('');
             }),
       ],
     );
