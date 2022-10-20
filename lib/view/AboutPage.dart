@@ -61,7 +61,7 @@ class AboutPageState extends State<AboutPage> {
                     padding:
                         EdgeInsets.only(right: 20.0, left: 20.0, top: 90.0),
                     child: Text(
-                      'O Jurislaw é um aplicativo de pesquisa jurisprudencial.'
+                      'O Jurislaw é um aplicativo de pesquisa jurisprudencial.' 
                       'Seu objetivo é unificar jurisprudências de diversos tribunais do Brasil em uma única ferramenta e notificar novas decisões.',
                       style: TextStyle(
                         color: Colors.white,

@@ -42,7 +42,7 @@ class AtribuicoesPageState extends State<AtribuicoesPage> {
                       color: Colors.white,
                     ),
                     prefixIcon: Icon(
-                      Icons.person_outline,
+                      Icons.format_list_numbered_sharp,
                       color: Colors.white,
                     ),
                     border: UnderlineInputBorder(
@@ -65,7 +65,7 @@ class AtribuicoesPageState extends State<AtribuicoesPage> {
                       color: Colors.white,
                     ),
                     prefixIcon: Icon(
-                      Icons.mail_outline,
+                      Icons.date_range_outlined,
                       color: Colors.white,
                     ),
                     border: UnderlineInputBorder(
@@ -87,7 +87,7 @@ class AtribuicoesPageState extends State<AtribuicoesPage> {
                       color: Colors.white,
                     ),
                     prefixIcon: Icon(
-                      Icons.key,
+                      Icons.person,
                       color: Colors.white,
                     ),
                     border: UnderlineInputBorder(
