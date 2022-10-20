@@ -24,6 +24,7 @@ class _LoginViewState extends State<LoginView> {
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
+            Image.asset("lib/src/images/logo.png"),
             Text(
               "Entrar",
               textAlign: TextAlign.center,
