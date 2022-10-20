@@ -29,7 +29,7 @@ class MenuAppBar extends StatelessWidget {
         ListTile(
           leading: Icon(Icons.search),
           title: Text('Jurisprudência'),
-          onTap: () {},
+          onTap: () => Navigator.of(context).pushNamed('/jurisprudencia'),
         ),
         ListTile(
           leading: Icon(Icons.calendar_month),

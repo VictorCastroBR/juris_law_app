@@ -5,6 +5,7 @@ import 'package:juris_law_app/view/AtribuicoesPage.dart';
 import 'package:juris_law_app/view/EquipePage.dart';
 import 'package:juris_law_app/view/CadastroPage.dart';
 import 'package:juris_law_app/view/LoginPage.dart';
+import 'package:juris_law_app/view/PesquisaPage.dart';
 
 import '../view/AboutPage.dart';
 import '../view/MenuPage.dart';
@@ -27,6 +28,7 @@ class AppMainWidget extends StatelessWidget {
         '/adicionar-membro': (context) => AddMemberPage(),
         '/atribuicoes': (context) => AtribuicoesPage(),
         '/equipe': (context) => EquipePage(),
+        '/jurisprudencia': (context) => PesquisaPage(),
       },
     );
   }
