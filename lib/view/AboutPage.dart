@@ -21,6 +21,7 @@ class AboutPageState extends State<AboutPage> {
         title: Text(
           'Sobre',
         ),
+        backgroundColor: Color.fromARGB(255, 65, 121, 100),
       ),
       backgroundColor: Color(0xFF7AAA98),
       body: ListView(
@@ -36,7 +37,9 @@ class AboutPageState extends State<AboutPage> {
                     padding: EdgeInsets.only(top: 30.0, bottom: 30.0),
                     child: Text(
                       'Desenvolvedores',
-                      style: TextStyle(fontSize: 30.0, color: Colors.orange),
+                      style: TextStyle(
+                          fontSize: 30.0,
+                          color: Color.fromARGB(255, 218, 253, 245)),
                     ),
                   ),
                   Row(

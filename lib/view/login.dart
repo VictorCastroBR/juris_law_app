@@ -21,10 +21,9 @@ class _LoginViewState extends State<LoginView> {
       //CORPO
       body: Container(
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
-            Image.asset("lib/src/images/logo.png"),
+            Container(width: 250, height: 250, child: Image.asset("logo.png")),
             Text(
               "Entrar",
               textAlign: TextAlign.center,
@@ -86,7 +85,7 @@ class _LoginViewState extends State<LoginView> {
             Padding(padding: EdgeInsets.only(bottom: 10)),
             GestureDetector(
               onTap: () {
-                Navigator.of(context).pushNamed('/cadastro');
+                Navigator.of(context).pushNamed('');
               },
               child: Text(
                 "Esqueceu a senha?",
@@ -96,10 +95,16 @@ class _LoginViewState extends State<LoginView> {
             ),
             SizedBox(height: 30),
             RaisedButton(
-                child: Text('Fazer Login'),
+                child: Text('Logar'),
                 onPressed: () {
                   Navigator.of(context).pushReplacementNamed('/menu');
-                })
+                }),
+            SizedBox(height: 30),
+            RaisedButton(
+                child: Text('Cadastrar'),
+                onPressed: () {
+                  Navigator.of(context).pushReplacementNamed('/cadastro');
+                }),
           ],
         ),
       ),
