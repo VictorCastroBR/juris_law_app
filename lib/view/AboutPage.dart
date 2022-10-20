@@ -22,39 +22,43 @@ class AboutPageState extends State<AboutPage> {
           'Sobre',
         ),
       ),
+      backgroundColor: Color(0xFF7AAA98),
       body: ListView(
         children: [
           Container(
             height: MediaQuery.of(context).size.height,
-            decoration: BoxDecoration(
-                gradient: LinearGradient(
-                    begin: Alignment.topCenter,
-                    end: Alignment.bottomCenter,
-                    colors: [
-                  Color.fromARGB(255, 233, 223, 223),
-                  Color.fromARGB(255, 112, 182, 106)
-                ])),
             child: Container(
               width: double.infinity,
               height: 350.0,
-              child: Center(
-                child: Column(
-                  children: [
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceAround,
-                      children: [
-                        DevProfile(
-                          name: "Viviane Alves",
-                          image: " ",
-                        ),
-                        DevProfile(
-                          name: "Victor Castro",
-                          image: " ",
-                        ),
-                      ],
+              child: Column(
+                children: [
+                  Padding(
+                    padding: EdgeInsets.only(top: 30.0, bottom: 30.0),
+                    child: Text(
+                      'Desenvolvedores',
+                      style: TextStyle(fontSize: 30.0, color: Colors.orange),
                     ),
-                    Text(
-                      'O Jurislaw é um aplicativo de pesquisa jurisprudencial. \n'
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceAround,
+                    children: [
+                      DevProfile(
+                        name: "Viviane Alves",
+                        image:
+                            "https://media-exp1.licdn.com/dms/image/C4D03AQFu30zedaHnxA/profile-displayphoto-shrink_800_800/0/1612791465780?e=1671667200&v=beta&t=36Jhj6PEsRFGoHU-dwJPw7zW4xp5Zu5XfqzT7aZYArA",
+                      ),
+                      DevProfile(
+                        name: "Victor Castro",
+                        image:
+                            "https://media-exp1.licdn.com/dms/image/C4E03AQG-smg3iTBieg/profile-displayphoto-shrink_800_800/0/1644150259469?e=1671667200&v=beta&t=s3-6asSXQMh5IjDJQz1Z243IZh1n8FYQKOT8XpNvf5w",
+                      ),
+                    ],
+                  ),
+                  Padding(
+                    padding:
+                        EdgeInsets.only(right: 20.0, left: 20.0, top: 90.0),
+                    child: Text(
+                      'O Jurislaw é um aplicativo de pesquisa jurisprudencial.'
                       'Seu objetivo é unificar jurisprudências de diversos tribunais do Brasil em uma única ferramenta e notificar novas decisões.',
                       style: TextStyle(
                         color: Colors.white,
@@ -62,8 +66,8 @@ class AboutPageState extends State<AboutPage> {
                         fontWeight: FontWeight.bold,
                       ),
                     ),
-                  ],
-                ),
+                  ),
+                ],
               ),
             ),
           ),
