@@ -1,7 +1,7 @@
 import 'dart:html';
 
 import 'package:flutter/material.dart';
-import 'package:juris_law_app/view/cadastro.dart';
+import 'package:juris_law_app/view/CadastroPage.dart';
 
 class LoginView extends StatefulWidget {
   @override

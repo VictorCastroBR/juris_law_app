@@ -3,8 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:juris_law_app/view/AddMemberPage.dart';
 import 'package:juris_law_app/view/AtribuicoesPage.dart';
 import 'package:juris_law_app/view/EquipePage.dart';
-import 'package:juris_law_app/view/cadastro.dart';
-import 'package:juris_law_app/view/login.dart';
+import 'package:juris_law_app/view/CadastroPage.dart';
+import 'package:juris_law_app/view/LoginPage.dart';
 
 import '../view/AboutPage.dart';
 import '../view/MenuPage.dart';
