@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:juris_law_app/view/AddMemberPage.dart';
 import 'package:juris_law_app/view/AtribuicoesPage.dart';
+import 'package:juris_law_app/view/EquipePage.dart';
 import 'package:juris_law_app/view/cadastro.dart';
 import 'package:juris_law_app/view/login.dart';
 
@@ -24,7 +25,8 @@ class AppMainWidget extends StatelessWidget {
         '/menu': (context) => MenuPage(),
         '/sobre': (context) => AboutPage(),
         '/adicionar-membro': (context) => AddMemberPage(),
-        '/atribuicoes': (context) => AtribuicoesPage()
+        '/atribuicoes': (context) => AtribuicoesPage(),
+        '/equipe': (context) => EquipePage(),
       },
     );
   }

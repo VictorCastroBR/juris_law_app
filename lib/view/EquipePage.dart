@@ -4,7 +4,6 @@ import 'package:flutter/material.dart';
 import '../widgets/MenuAppBar.dart';
 import '../widgets/ProfileMember.dart';
 
-
 class EquipePage extends StatefulWidget {
   @override
   State<StatefulWidget> createState() {
@@ -15,8 +14,8 @@ class EquipePage extends StatefulWidget {
 class EquipePageState extends State<EquipePage> {
   @override
   Widget build(BuildContext context) {
-    return  Scaffold(
-      drawer: EquipePage(),
+    return Scaffold(
+      drawer: MenuAppBar(),
       appBar: AppBar(
         title: Text('JurisLaw'),
         backgroundColor: Color.fromARGB(255, 65, 121, 100),
@@ -29,7 +28,6 @@ class EquipePageState extends State<EquipePage> {
     );
   }
 }
-
 
 class DivTeamWidget extends StatelessWidget {
   @override

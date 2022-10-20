@@ -27,6 +27,11 @@ class MenuAppBar extends StatelessWidget {
           onTap: () => Navigator.of(context).pushNamed('/sobre'),
         ),
         ListTile(
+          leading: Icon(Icons.people_alt),
+          title: Text('Equipe'),
+          onTap: () => Navigator.of(context).pushNamed('/equipe'),
+        ),
+        ListTile(
           leading: Icon(Icons.search),
           title: Text('Jurisprudência'),
           onTap: () {},
