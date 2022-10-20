@@ -22,11 +22,6 @@ class MenuAppBar extends StatelessWidget {
           onTap: () => Navigator.of(context).pushNamed('/menu'),
         ),
         ListTile(
-          leading: Icon(Icons.info),
-          title: Text('Sobre'),
-          onTap: () => Navigator.of(context).pushNamed('/sobre'),
-        ),
-        ListTile(
           leading: Icon(Icons.people_alt),
           title: Text('Equipe'),
           onTap: () => Navigator.of(context).pushNamed('/equipe'),
@@ -45,6 +40,11 @@ class MenuAppBar extends StatelessWidget {
           leading: Icon(Icons.notifications_active),
           title: Text('Notificações'),
           onTap: () {},
+        ),
+        ListTile(
+          leading: Icon(Icons.info),
+          title: Text('Sobre'),
+          onTap: () => Navigator.of(context).pushNamed('/sobre'),
         ),
         ListTile(
           leading: Icon(Icons.logout, color: Colors.red),
