@@ -86,6 +86,12 @@ class DivPesqWidget extends StatelessWidget {
             ),
           ),
         ),
+        SizedBox(height: 30),
+        RaisedButton(
+            child: Text('Pesquisar'),
+            onPressed: () {
+              Navigator.of(context).pushReplacementNamed('/');
+            }),
       ],
     );
   }

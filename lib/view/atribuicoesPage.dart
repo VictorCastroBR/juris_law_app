@@ -116,7 +116,7 @@ class AtribuicoesPageState extends State<AtribuicoesPage> {
             ),
             SizedBox(height: 30),
             RaisedButton(
-                child: Text('Cadastrar'),
+                child: Text('Enviar'),
                 onPressed: () {
                   Navigator.of(context).pushReplacementNamed('/');
                 }),
