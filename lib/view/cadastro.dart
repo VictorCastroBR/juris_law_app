@@ -103,6 +103,12 @@ class _CadastroViewState extends State<CadastroView> {
                 ),
               ]),
             ),
+            SizedBox(height: 30),
+            RaisedButton(
+                child: Text('Cadastrar'),
+                onPressed: () {
+                  Navigator.of(context).pushReplacementNamed('/');
+                }),
           ],
         ),
       ),
