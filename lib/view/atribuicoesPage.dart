@@ -1,3 +1,4 @@
+import 'package:dropdown_plus/dropdown_plus.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/material.dart';
 
@@ -80,28 +81,37 @@ class AtribuicoesPageState extends State<AtribuicoesPage> {
                     ),
                   ),
                 ),
-                TextFormField(
+                TextDropdownFormField(
+                  options: ["Victor", "Viviane"],
                   decoration: InputDecoration(
-                    labelText: "Atribuir para: ",
-                    labelStyle: TextStyle(
-                      color: Colors.white,
-                    ),
-                    prefixIcon: Icon(
-                      Icons.person,
-                      color: Colors.white,
-                    ),
-                    border: UnderlineInputBorder(
-                      borderSide: BorderSide(
-                        color: Colors.white,
-                      ),
-                    ),
-                    focusedBorder: UnderlineInputBorder(
-                      borderSide: BorderSide(
-                        color: Colors.white,
-                      ),
-                    ),
-                  ),
+                      border: OutlineInputBorder(),
+                      suffixIcon: Icon(Icons.arrow_drop_down),
+                      labelText: "Atribuir",
+                      focusColor: Color.fromARGB(255, 255, 255, 255)),
+                  dropdownHeight: 120,
                 ),
+                // TextFormField(
+                //   decoration: InputDecoration(
+                //     labelText: "Atribuir para: ",
+                //     labelStyle: TextStyle(
+                //       color: Colors.white,
+                //     ),
+                //     prefixIcon: Icon(
+                //       Icons.person,
+                //       color: Colors.white,
+                //     ),
+                //     border: UnderlineInputBorder(
+                //       borderSide: BorderSide(
+                //         color: Colors.white,
+                //       ),
+                //     ),
+                //     focusedBorder: UnderlineInputBorder(
+                //       borderSide: BorderSide(
+                //         color: Colors.white,
+                //       ),
+                //     ),
+                //   ),
+                // ),
               ]),
             ),
             SizedBox(height: 30),
