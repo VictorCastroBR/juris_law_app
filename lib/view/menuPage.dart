@@ -96,14 +96,13 @@ class DivTeamWidget extends StatelessWidget {
                 style: TextStyle(fontSize: 20.0),
               ),
               GestureDetector(
-                child: Text(
-                  '+Adicionar',
-                  style: TextStyle(fontSize: 20.0, color: Colors.orange[600]),
-                ),
-                onTap: () {
-                  Navigator.of(context).pushNamed('/adicionar-membro');
-                },
-              ),
+                  child: Text(
+                    '+Adicionar',
+                    style: TextStyle(fontSize: 20.0, color: Colors.orange[600]),
+                  ),
+                  onTap: () {
+                    Navigator.of(context).pushNamed('/adicionar-membro');
+                  }),
             ],
           ),
         ),
