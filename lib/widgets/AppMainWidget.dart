@@ -9,6 +9,7 @@ import 'package:juris_law_app/view/PesquisaPage.dart';
 
 import '../view/AboutPage.dart';
 import '../view/MenuPage.dart';
+import '../view/NotificationPage.dart';
 
 class AppMainWidget extends StatelessWidget {
   @override
@@ -29,6 +30,7 @@ class AppMainWidget extends StatelessWidget {
         '/atribuicoes': (context) => AtribuicoesPage(),
         '/equipe': (context) => EquipePage(),
         '/jurisprudencia': (context) => PesquisaPage(),
+        '/notificacoes': (context) => NotificationPage(),
       },
     );
   }

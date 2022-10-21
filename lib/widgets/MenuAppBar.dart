@@ -1,6 +1,3 @@
-import 'dart:ui';
-
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class MenuAppBar extends StatelessWidget {
@@ -39,7 +36,7 @@ class MenuAppBar extends StatelessWidget {
         ListTile(
           leading: Icon(Icons.notifications_active),
           title: Text('Notificações'),
-          onTap: () {},
+          onTap: () => Navigator.of(context).pushNamed('/notificacoes'),
         ),
         ListTile(
           leading: Icon(Icons.info),
