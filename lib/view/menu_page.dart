@@ -1,8 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-import '../widgets/MenuAppBar.dart';
-import '../widgets/ProfileMember.dart';
+import '../widgets/app_drawer.dart';
+import '../widgets/profile_member.dart';
 
 class MenuPage extends StatefulWidget {
   @override

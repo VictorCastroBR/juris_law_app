@@ -1,31 +1,30 @@
-import 'dart:html';
-
+import 'package:dropdown_plus/dropdown_plus.dart';
 import 'package:flutter/material.dart';
-import 'package:juris_law_app/view/CadastroPage.dart';
 
-class LoginView extends StatefulWidget {
+class AtribuicoesPage extends StatefulWidget {
   @override
-  State<LoginView> createState() => _LoginViewState();
+  State<AtribuicoesPage> createState() {
+    return AtribuicoesPageState();
+  }
 }
 
-class _LoginViewState extends State<LoginView> {
+class AtribuicoesPageState extends State<AtribuicoesPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Login'),
-        centerTitle: true,
+        title: Text('Atribuições'),
         backgroundColor: Color.fromARGB(255, 65, 121, 100),
       ),
       backgroundColor: Color(0xFF7AAA98),
       //CORPO
-      body: Container(
+      body: SizedBox(
         child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
-            Container(width: 250, height: 250, child: Image.asset("logo.png")),
             Text(
-              "Entrar",
+              "Atribuir pesquisa:",
               textAlign: TextAlign.center,
               style: TextStyle(
                 color: Colors.white,
@@ -38,12 +37,12 @@ class _LoginViewState extends State<LoginView> {
                 TextFormField(
                   autofocus: true,
                   decoration: InputDecoration(
-                    labelText: "E-mail",
+                    labelText: "Numero do processo: ",
                     labelStyle: TextStyle(
                       color: Colors.white,
                     ),
                     prefixIcon: Icon(
-                      Icons.mail_outline,
+                      Icons.format_list_numbered_sharp,
                       color: Colors.white,
                     ),
                     border: UnderlineInputBorder(
@@ -59,13 +58,14 @@ class _LoginViewState extends State<LoginView> {
                   ),
                 ),
                 TextFormField(
+                  autofocus: true,
                   decoration: InputDecoration(
-                    labelText: "Senha",
+                    labelText: "Periodo:",
                     labelStyle: TextStyle(
                       color: Colors.white,
                     ),
                     prefixIcon: Icon(
-                      Icons.key,
+                      Icons.date_range_outlined,
                       color: Colors.white,
                     ),
                     border: UnderlineInputBorder(
@@ -80,30 +80,22 @@ class _LoginViewState extends State<LoginView> {
                     ),
                   ),
                 ),
+                TextDropdownFormField(
+                  options: ["Victor", "Viviane"],
+                  decoration: InputDecoration(
+                      border: OutlineInputBorder(),
+                      suffixIcon: Icon(Icons.arrow_drop_down),
+                      labelText: "Atribuir",
+                      focusColor: Color.fromARGB(255, 255, 255, 255)),
+                  dropdownHeight: 120,
+                ),
               ]),
             ),
-            Padding(padding: EdgeInsets.only(bottom: 10)),
-            GestureDetector(
-              onTap: () {
-                Navigator.of(context).pushNamed('');
-              },
-              child: Text(
-                "Esqueceu a senha?",
-                style: TextStyle(color: Colors.white, fontSize: 12),
-                textAlign: TextAlign.right,
-              ),
-            ),
             SizedBox(height: 30),
-            RaisedButton(
-                child: Text('Logar'),
+            ElevatedButton(
+                child: Text('Enviar'),
                 onPressed: () {
-                  Navigator.of(context).pushReplacementNamed('/menu');
-                }),
-            SizedBox(height: 30),
-            RaisedButton(
-                child: Text('Cadastrar'),
-                onPressed: () {
-                  Navigator.of(context).pushReplacementNamed('/cadastro');
+                  Navigator.of(context).pushReplacementNamed('/');
                 }),
           ],
         ),

@@ -1,22 +1,20 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:juris_law_app/widgets/app_drawer.dart';
 
-import '../widgets/MenuAppBar.dart';
-
-class NotificationPage extends StatefulWidget {
+class ColecoesPage extends StatefulWidget {
   @override
-  State<NotificationPage> createState() {
-    return NotificationPageState();
+  State<ColecoesPage> createState() {
+    return ColecoesPageState();
   }
 }
 
-class NotificationPageState extends State<NotificationPage> {
+class ColecoesPageState extends State<ColecoesPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       drawer: MenuAppBar(),
       appBar: AppBar(
-        title: Text('Notificações'),
+        title: Text('Coleções'),
         backgroundColor: Color.fromARGB(255, 65, 121, 100),
       ),
       body: ListView(

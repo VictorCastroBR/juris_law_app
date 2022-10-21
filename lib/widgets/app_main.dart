@@ -1,15 +1,13 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:juris_law_app/view/AddMemberPage.dart';
-import 'package:juris_law_app/view/AtribuicoesPage.dart';
-import 'package:juris_law_app/view/EquipePage.dart';
-import 'package:juris_law_app/view/CadastroPage.dart';
-import 'package:juris_law_app/view/LoginPage.dart';
-import 'package:juris_law_app/view/PesquisaPage.dart';
-
-import '../view/AboutPage.dart';
-import '../view/MenuPage.dart';
-import '../view/NotificationPage.dart';
+import 'package:juris_law_app/view/add_member_page.dart';
+import 'package:juris_law_app/view/atribuicoes_page.dart';
+import 'package:juris_law_app/view/equipe_page.dart';
+import 'package:juris_law_app/view/cadastro_page.dart';
+import 'package:juris_law_app/view/login_page.dart';
+import 'package:juris_law_app/view/pesquisa_page.dart';
+import 'package:juris_law_app/view/about_page.dart';
+import 'package:juris_law_app/view/colecoes.dart';
+import 'package:juris_law_app/view/menu_page.dart';
 
 class AppMainWidget extends StatelessWidget {
   @override
@@ -30,7 +28,7 @@ class AppMainWidget extends StatelessWidget {
         '/atribuicoes': (context) => AtribuicoesPage(),
         '/equipe': (context) => EquipePage(),
         '/jurisprudencia': (context) => PesquisaPage(),
-        '/notificacoes': (context) => NotificationPage(),
+        '/notificacoes': (context) => ColecoesPage(),
       },
     );
   }

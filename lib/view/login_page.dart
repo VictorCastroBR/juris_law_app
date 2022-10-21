@@ -1,31 +1,28 @@
-import 'package:dropdown_plus/dropdown_plus.dart';
-import 'package:flutter/material.dart';
 import 'package:flutter/material.dart';
 
-class AtribuicoesPage extends StatefulWidget {
+class LoginView extends StatefulWidget {
   @override
-  State<AtribuicoesPage> createState() {
-    return AtribuicoesPageState();
-  }
+  State<LoginView> createState() => _LoginViewState();
 }
 
-class AtribuicoesPageState extends State<AtribuicoesPage> {
+class _LoginViewState extends State<LoginView> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Atribuições'),
+        title: Text('Login'),
+        centerTitle: true,
         backgroundColor: Color.fromARGB(255, 65, 121, 100),
       ),
       backgroundColor: Color(0xFF7AAA98),
       //CORPO
       body: Container(
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
+            Container(width: 250, height: 250, child: Image.asset("logo.png")),
             Text(
-              "Atribuir pesquisa:",
+              "Entrar",
               textAlign: TextAlign.center,
               style: TextStyle(
                 color: Colors.white,
@@ -38,12 +35,12 @@ class AtribuicoesPageState extends State<AtribuicoesPage> {
                 TextFormField(
                   autofocus: true,
                   decoration: InputDecoration(
-                    labelText: "Numero do processo: ",
+                    labelText: "E-mail",
                     labelStyle: TextStyle(
                       color: Colors.white,
                     ),
                     prefixIcon: Icon(
-                      Icons.format_list_numbered_sharp,
+                      Icons.mail_outline,
                       color: Colors.white,
                     ),
                     border: UnderlineInputBorder(
@@ -59,14 +56,13 @@ class AtribuicoesPageState extends State<AtribuicoesPage> {
                   ),
                 ),
                 TextFormField(
-                  autofocus: true,
                   decoration: InputDecoration(
-                    labelText: "Periodo:",
+                    labelText: "Senha",
                     labelStyle: TextStyle(
                       color: Colors.white,
                     ),
                     prefixIcon: Icon(
-                      Icons.date_range_outlined,
+                      Icons.key,
                       color: Colors.white,
                     ),
                     border: UnderlineInputBorder(
@@ -81,44 +77,30 @@ class AtribuicoesPageState extends State<AtribuicoesPage> {
                     ),
                   ),
                 ),
-                TextDropdownFormField(
-                  options: ["Victor", "Viviane"],
-                  decoration: InputDecoration(
-                      border: OutlineInputBorder(),
-                      suffixIcon: Icon(Icons.arrow_drop_down),
-                      labelText: "Atribuir",
-                      focusColor: Color.fromARGB(255, 255, 255, 255)),
-                  dropdownHeight: 120,
-                ),
-                // TextFormField(
-                //   decoration: InputDecoration(
-                //     labelText: "Atribuir para: ",
-                //     labelStyle: TextStyle(
-                //       color: Colors.white,
-                //     ),
-                //     prefixIcon: Icon(
-                //       Icons.person,
-                //       color: Colors.white,
-                //     ),
-                //     border: UnderlineInputBorder(
-                //       borderSide: BorderSide(
-                //         color: Colors.white,
-                //       ),
-                //     ),
-                //     focusedBorder: UnderlineInputBorder(
-                //       borderSide: BorderSide(
-                //         color: Colors.white,
-                //       ),
-                //     ),
-                //   ),
-                // ),
               ]),
             ),
+            Padding(padding: EdgeInsets.only(bottom: 10)),
+            GestureDetector(
+              onTap: () {
+                Navigator.of(context).pushNamed('');
+              },
+              child: Text(
+                "Esqueceu a senha?",
+                style: TextStyle(color: Colors.white, fontSize: 12),
+                textAlign: TextAlign.right,
+              ),
+            ),
             SizedBox(height: 30),
-            RaisedButton(
-                child: Text('Enviar'),
+            ElevatedButton(
+                child: Text('Logar'),
                 onPressed: () {
-                  Navigator.of(context).pushReplacementNamed('/');
+                  Navigator.of(context).pushReplacementNamed('/menu');
+                }),
+            SizedBox(height: 30),
+            ElevatedButton(
+                child: Text('Cadastrar'),
+                onPressed: () {
+                  Navigator.of(context).pushReplacementNamed('/cadastro');
                 }),
           ],
         ),

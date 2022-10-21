@@ -34,8 +34,8 @@ class MenuAppBar extends StatelessWidget {
           onTap: () => Navigator.of(context).pushNamed('/atribuicoes'),
         ),
         ListTile(
-          leading: Icon(Icons.notifications_active),
-          title: Text('Notificações'),
+          leading: Icon(Icons.add_box_rounded),
+          title: Text('Coleções'),
           onTap: () => Navigator.of(context).pushNamed('/notificacoes'),
         ),
         ListTile(
@@ -53,19 +53,23 @@ class MenuAppBar extends StatelessWidget {
               actions: <Widget>[
                 TextButton(
                     onPressed: () => Navigator.pop(context, 'Cancel'),
-                    child: const Text('Cancel',
-                        style: TextStyle(color: Colors.white)),
                     style: ButtonStyle(
                         backgroundColor: MaterialStateProperty.all(
-                            Color.fromARGB(255, 255, 0, 0)))),
+                            Color.fromARGB(255, 255, 0, 0))),
+                    child: const Text('Cancel',
+                        style: TextStyle(color: Colors.white))),
                 TextButton(
                     onPressed: () =>
                         Navigator.of(context).pushReplacementNamed('/'),
-                    child: const Text('Sim',
-                        style: TextStyle(color: Colors.white)),
                     style: ButtonStyle(
                         backgroundColor: MaterialStateProperty.all(
-                            Color.fromARGB(255, 0, 255, 4)))),
+                            Color.fromARGB(255, 0, 255, 4))),
+                    child: const Text(
+                      'Sim',
+                      style: TextStyle(
+                        color: Colors.white,
+                      ),
+                    )),
               ],
             ),
           ),

@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-import '../widgets/MenuAppBar.dart';
+import '../widgets/app_drawer.dart';
 
 class PesquisaPage extends StatefulWidget {
   @override
@@ -87,7 +87,7 @@ class DivPesqWidget extends StatelessWidget {
           ),
         ),
         SizedBox(height: 30),
-        RaisedButton(
+        ElevatedButton(
             child: Text('Pesquisar'),
             onPressed: () {
               Navigator.of(context).pushReplacementNamed('');
