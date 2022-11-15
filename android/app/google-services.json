@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "388459311901",
+    "project_id": "juris-law-app",
+    "storage_bucket": "juris-law-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:388459311901:android:af486dd528a35e79d827f4",
+        "android_client_info": {
+          "package_name": "com.example.juris_law_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "388459311901-s2d0veosdp16q3l9v4thui8lb0pjj7pf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD6ioSFfUQYQAt9wcWE-s-3HJyvA-TyS0o"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "388459311901-s2d0veosdp16q3l9v4thui8lb0pjj7pf.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "388459311901-1l69pck9estfbtp1gokocp3iik9efibt.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.jurisLawApp"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

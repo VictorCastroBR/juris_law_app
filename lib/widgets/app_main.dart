@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:juris_law_app/view/add_member_page.dart';
 import 'package:juris_law_app/view/atribuicoes_page.dart';
 import 'package:juris_law_app/view/equipe_page.dart';
-import 'package:juris_law_app/view/cadastro_page.dart';
+import 'package:juris_law_app/view/criar_conta_page.dart';
 import 'package:juris_law_app/view/login_page.dart';
 import 'package:juris_law_app/view/pesquisa_page.dart';
 import 'package:juris_law_app/view/about_page.dart';
@@ -20,8 +20,8 @@ class AppMainWidget extends StatelessWidget {
       ),
       initialRoute: '/',
       routes: {
-        '/': (context) => LoginView(),
-        '/cadastro': (context) => CadastroView(),
+        '/': (context) => LoginPage(),
+        '/criar_conta': (context) => CriarContaPage(),
         '/menu': (context) => MenuPage(),
         '/sobre': (context) => AboutPage(),
         '/adicionar-membro': (context) => AddMemberPage(),
