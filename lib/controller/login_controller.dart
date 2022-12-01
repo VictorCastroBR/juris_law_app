@@ -13,7 +13,7 @@ class LoginController {
         .signInWithEmailAndPassword(email: email, password: senha)
         .then((res) {
       sucesso(context, 'Usuário autenticado com sucesso.');
-      Navigator.pushReplacementNamed(context, 'principal');
+      Navigator.pushReplacementNamed(context, '/menu');
     }).catchError((e) {
       switch (e.code) {
         case 'invalid-email':
@@ -42,12 +42,12 @@ class LoginController {
   //
   // CRIAR CONTA
   //
-  void criarConta(context, nome, email, senha) {
+  void criarConta(context, nome, email, senha) async {
     FirebaseAuth.instance
         .createUserWithEmailAndPassword(email: email, password: senha)
-        .then((res) {
+        .then((res) async {
       //Armazenar o nome no Firestore
-      FirebaseFirestore.instance.collection('usuarios').add({
+      await FirebaseFirestore.instance.collection('usuarios').add({
         "uid": res.user!.uid.toString(),
         "nome": nome,
       });
