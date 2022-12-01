@@ -44,26 +44,26 @@ class MenuAppBar extends StatelessWidget {
           onTap: () => Navigator.of(context).pushNamed('/sobre'),
         ),
         ListTile(
-          leading: Icon(Icons.logout, color: Colors.red),
+          leading: Icon(Icons.logout, color: Color.fromARGB(255, 230, 102, 93)),
           title: Text('Sair'),
           onTap: () => showDialog<String>(
             context: context,
             builder: (BuildContext context) => AlertDialog(
-              title: const Text('Você deseja sair?'),
+              title: const Text('Deseja sair?'),
               actions: <Widget>[
                 TextButton(
                     onPressed: () => Navigator.pop(context, 'Cancel'),
                     style: ButtonStyle(
                         backgroundColor: MaterialStateProperty.all(
-                            Color.fromARGB(255, 255, 0, 0))),
-                    child: const Text('Cancel',
+                            Color.fromARGB(255, 168, 74, 74))),
+                    child: const Text('Não',
                         style: TextStyle(color: Colors.white))),
                 TextButton(
                     onPressed: () =>
                         Navigator.of(context).pushReplacementNamed('/'),
                     style: ButtonStyle(
                         backgroundColor: MaterialStateProperty.all(
-                            Color.fromARGB(255, 0, 255, 4))),
+                            Color.fromARGB(255, 92, 158, 131))),
                     child: const Text(
                       'Sim',
                       style: TextStyle(
