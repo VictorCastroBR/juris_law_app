@@ -1,18 +1,46 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:firebase_auth/firebase_auth.dart';
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+
+class User {
+  Future<String> retornaFuncionarioLogado() async {
+    var uid = FirebaseAuth.instance.currentUser!.uid;
+    // ignore: prefer_typing_uninitialized_variables
+    var res;
+    await FirebaseFirestore.instance
+        .collection('usuarios')
+        .where('uid', isEqualTo: uid)
+        .get()
+        .then(
+      (q) {
+        if (q.docs.isNotEmpty) {
+          res = q.docs[0].data()['nome'];
+        } else {
+          res = "";
+        }
+      },
+    );
+    return res;
+  }
+}
 
 class MenuAppBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Drawer(
       child: Column(children: [
-        UserAccountsDrawerHeader(
-          decoration: BoxDecoration(color: Color.fromARGB(255, 140, 228, 185)),
-          currentAccountPicture: ClipOval(
-            child: Container(color: Colors.white),
-          ),
-          accountName: Text('admin'),
-          accountEmail: Text('admin@gmail.com'),
-        ),
+        FutureBuilder(future: ,builder: (context, snapshot) {
+          return UserAccountsDrawerHeader(
+            decoration:
+                BoxDecoration(color: Color.fromARGB(255, 140, 228, 185)),
+            currentAccountPicture: ClipOval(
+              child: Container(color: Colors.white),
+            ),
+            accountName: Text(User().retornaFuncionarioLogado().toString()),
+            accountEmail: Text('admin@gmail.com'),
+          );
+        }),
         ListTile(
           leading: Icon(Icons.home),
           title: Text('Home'),
