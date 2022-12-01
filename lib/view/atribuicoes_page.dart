@@ -16,7 +16,7 @@ class AtribuicoesPageState extends State<AtribuicoesPage> {
         title: Text('Atribuições'),
         backgroundColor: Color.fromARGB(255, 65, 121, 100),
       ),
-      backgroundColor: Color(0xFF7AAA98),
+      backgroundColor: Color.fromARGB(255, 255, 255, 255),
       //CORPO
       body: SizedBox(
         child: Column(
@@ -27,7 +27,7 @@ class AtribuicoesPageState extends State<AtribuicoesPage> {
               "Atribuir pesquisa:",
               textAlign: TextAlign.center,
               style: TextStyle(
-                color: Colors.white,
+                color: Color.fromARGB(255, 116, 113, 113),
                 fontSize: 24,
                 fontWeight: FontWeight.bold,
               ),
@@ -39,20 +39,20 @@ class AtribuicoesPageState extends State<AtribuicoesPage> {
                   decoration: InputDecoration(
                     labelText: "Numero do processo: ",
                     labelStyle: TextStyle(
-                      color: Colors.white,
+                      color: Color.fromARGB(255, 116, 113, 113),
                     ),
                     prefixIcon: Icon(
                       Icons.format_list_numbered_sharp,
-                      color: Colors.white,
+                      color: Color.fromARGB(255, 116, 113, 113),
                     ),
                     border: UnderlineInputBorder(
                       borderSide: BorderSide(
-                        color: Colors.white,
+                        color: Color.fromARGB(255, 116, 113, 113),
                       ),
                     ),
                     focusedBorder: UnderlineInputBorder(
                       borderSide: BorderSide(
-                        color: Colors.white,
+                        color: Color.fromARGB(255, 116, 113, 113),
                       ),
                     ),
                   ),
@@ -62,20 +62,20 @@ class AtribuicoesPageState extends State<AtribuicoesPage> {
                   decoration: InputDecoration(
                     labelText: "Periodo:",
                     labelStyle: TextStyle(
-                      color: Colors.white,
+                      color: Color.fromARGB(255, 116, 113, 113),
                     ),
                     prefixIcon: Icon(
                       Icons.date_range_outlined,
-                      color: Colors.white,
+                      color: Color.fromARGB(255, 116, 113, 113),
                     ),
                     border: UnderlineInputBorder(
                       borderSide: BorderSide(
-                        color: Colors.white,
+                        color: Color.fromARGB(255, 116, 113, 113),
                       ),
                     ),
                     focusedBorder: UnderlineInputBorder(
                       borderSide: BorderSide(
-                        color: Colors.white,
+                        color: Color.fromARGB(255, 116, 113, 113),
                       ),
                     ),
                   ),
@@ -86,7 +86,7 @@ class AtribuicoesPageState extends State<AtribuicoesPage> {
                       border: OutlineInputBorder(),
                       suffixIcon: Icon(Icons.arrow_drop_down),
                       labelText: "Atribuir",
-                      focusColor: Color.fromARGB(255, 255, 255, 255)),
+                      focusColor: Color.fromARGB(255, 116, 113, 113)),
                   dropdownHeight: 120,
                 ),
               ]),

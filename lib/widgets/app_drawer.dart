@@ -13,7 +13,7 @@ class MenuAppBar extends StatelessWidget {
       child: Column(children: [
         UserAccountsDrawerHeader(
           decoration:
-              BoxDecoration(color: Color.fromARGB(255, 140, 228, 185)),
+              BoxDecoration(color: Color.fromARGB(255, 65, 121, 100)),
           currentAccountPicture: ClipOval(
             child: Container(color: Colors.white),
           ),

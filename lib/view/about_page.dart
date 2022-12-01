@@ -2,6 +2,7 @@ import 'dart:html';
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/painting.dart';
 
 import '../widgets/app_drawer.dart';
 
@@ -23,7 +24,7 @@ class AboutPageState extends State<AboutPage> {
         ),
         backgroundColor: Color.fromARGB(255, 65, 121, 100),
       ),
-      backgroundColor: Color(0xFF7AAA98),
+      backgroundColor: Color.fromARGB(255, 255, 255, 255),
       body: ListView(
         children: [
           Container(
@@ -39,8 +40,8 @@ class AboutPageState extends State<AboutPage> {
                       'Desenvolvedores',
                       style: TextStyle(
                         fontSize: 30.0,
-                        color: Color.fromARGB(255, 218, 253, 245),
-                        decoration: TextDecoration.overline,
+                        color: Color.fromARGB(255, 65, 121, 100),
+                        decoration: TextDecoration.underline,
                       ),
                     ),
                   ),
@@ -66,7 +67,7 @@ class AboutPageState extends State<AboutPage> {
                       'O Jurislaw é um aplicativo de pesquisa jurisprudencial. \n'
                       'Seu objetivo é unificar jurisprudências de diversos tribunais do Brasil em uma única ferramenta e notificar novas decisões.',
                       style: TextStyle(
-                        color: Colors.white,
+                        color: Color.fromARGB(255, 49, 49, 49),
                         fontSize: 20,
                         fontWeight: FontWeight.bold,
                       ),
