@@ -44,10 +44,7 @@ class MenuPageState extends State<MenuPage> {
             width: MediaQuery.of(context).size.width,
             child: Column(
               children: [
-                Expanded(
-                  flex: 1,
-                  child: UserHeader()
-                ),
+                Expanded(flex: 1, child: UserHeader()),
                 Expanded(
                   flex: 9,
                   child: ExpansionAreaWidget(),
@@ -58,9 +55,10 @@ class MenuPageState extends State<MenuPage> {
         }),
       ),
       floatingActionButton: FloatingActionButton(
+        backgroundColor: Colors.green,
         onPressed: () {
           showDialog(
-            context: context,
+              context: context,
               builder: (BuildContext context) {
                 // retorna um objeto do tipo Dialog
                 return AlertDialog(
@@ -81,21 +79,25 @@ class MenuPageState extends State<MenuPage> {
                         Center(
                           child: TextButton(
                             child: Text('OK'),
-                            onPressed: (){
-                              FirebaseFirestore.instance.collection('areas')
-                              .get()
-                              .then((value) => {
-                                if(value.docs.isNotEmpty){
-                                  id = value.docs.length,
-                                  id++,
-                                  FirebaseFirestore.instance.collection('areas')
-                                  .doc(id.toString())
-                                  .set({
-                                    'name': credentialModel.nameAreaController.text,
-                                  }),
-                                  Navigator.pop(context),
-                                }
-                              });
+                            onPressed: () {
+                              FirebaseFirestore.instance
+                                  .collection('areas')
+                                  .get()
+                                  .then((value) => {
+                                        if (value.docs.isNotEmpty)
+                                          {
+                                            id = value.docs.length,
+                                            id++,
+                                            FirebaseFirestore.instance
+                                                .collection('areas')
+                                                .doc(id.toString())
+                                                .set({
+                                              'name': credentialModel
+                                                  .nameAreaController.text,
+                                            }),
+                                            Navigator.pop(context),
+                                          }
+                                      });
                             },
                           ),
                         ),
@@ -103,10 +105,12 @@ class MenuPageState extends State<MenuPage> {
                     ),
                   ),
                 );
-              }
-          );
+              });
         },
-        child: Icon(Icons.add, color: Colors.black,),
+        child: Icon(
+          Icons.add,
+          color: Colors.black,
+        ),
       ),
     );
   }
@@ -115,6 +119,7 @@ class MenuPageState extends State<MenuPage> {
 class UserHeader extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    CredentialModel credentialModel = context.watch<CredentialModel>();
     return ListTile(
       leading: CircleAvatar(
         radius: 30.0,
@@ -123,7 +128,7 @@ class UserHeader extends StatelessWidget {
           'https://cdn4.iconfinder.com/data/icons/small-n-flat/24/user-512.png',
         ),
       ),
-      title: Text('Admin'),
+      title: Text(credentialModel.name.toString()),
       subtitle: Text('admin@gmail.com'),
     );
   }
@@ -135,33 +140,40 @@ class ExpansionAreaWidget extends StatelessWidget {
     CredentialModel credentialModel = context.read<CredentialModel>();
     return Container(
       child: FutureBuilder(
-        future: FirebaseFirestore.instance.collection('areas')
-        .get()
-        .then((value) => {
-          if(value.docs.isNotEmpty){
-            credentialModel.clearList(),
-            // ignore: avoid_function_literals_in_foreach_calls
-            value.docs.forEach((element) {
-              credentialModel.addListObject(
-                element.data()['name'],
-              );
-            })
-          } else if (value.docs.isEmpty){
-            // ignore: avoid_function_literals_in_foreach_calls
-            value.docs.forEach((element) {
-              credentialModel.addListObject(
-                element.data()['name'],
-              );
-            })
-          }
-        }).catchError((e){
+        future: FirebaseFirestore.instance
+            .collection('areas')
+            .get()
+            .then((value) => {
+                  if (value.docs.isNotEmpty)
+                    {
+                      credentialModel.clearList(),
+                      // ignore: avoid_function_literals_in_foreach_calls
+                      value.docs.forEach((element) {
+                        credentialModel.addListObject(
+                          element.data()['name'],
+                        );
+                      })
+                    }
+                  else if (value.docs.isEmpty)
+                    {
+                      // ignore: avoid_function_literals_in_foreach_calls
+                      value.docs.forEach((element) {
+                        credentialModel.addListObject(
+                          element.data()['name'],
+                        );
+                      })
+                    }
+                })
+            .catchError((e) {
           erro(context, 'Vagas não disponíveis');
         }),
         builder: (context, snapshot) {
           return ListView.builder(
             itemCount: credentialModel.listVagas.length,
             itemBuilder: ((context, index) {
-              return Text(credentialModel.listVagas[index]);
+              return ListTile(
+                title: Text(credentialModel.listVagas[index]),
+              );
             }),
           );
         },

@@ -7,13 +7,11 @@ import 'package:provider/provider.dart';
 class MenuAppBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    print('Build - App drawer');
     CredentialModel credentialModel = context.watch<CredentialModel>();
     return Drawer(
       child: Column(children: [
         UserAccountsDrawerHeader(
-          decoration:
-              BoxDecoration(color: Color.fromARGB(255, 65, 121, 100)),
+          decoration: BoxDecoration(color: Color.fromARGB(255, 65, 121, 100)),
           currentAccountPicture: ClipOval(
             child: Container(color: Colors.white),
           ),
