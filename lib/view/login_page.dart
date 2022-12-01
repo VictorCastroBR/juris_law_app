@@ -29,10 +29,12 @@ class _LoginPageState extends State<LoginPage> {
               Container(
                 padding: EdgeInsets.fromLTRB(100, 50, 100, 50),
                 child: Center(
-                  child: Icon(
-                    Icons.task_outlined,
-                    color: Colors.blueAccent.shade700,
-                    size: 150.0,
+                  child: CircleAvatar(
+                    radius: 80.0,
+                    backgroundColor: Colors.blueGrey.shade700,
+                    backgroundImage: NetworkImage(
+                      'lib/src/images/logo.png',
+                    ),
                   ),
                 ),
               ),
@@ -46,7 +48,7 @@ class _LoginPageState extends State<LoginPage> {
                       "Esqueceu a senha?",
                       style: GoogleFonts.roboto(
                         fontSize: 16,
-                        color: Colors.blueAccent.shade700,
+                        color: Color.fromARGB(255, 0, 0, 0),
                       ),
                     ),
                     onPressed: () {
@@ -84,13 +86,13 @@ class _LoginPageState extends State<LoginPage> {
                                 'cancelar',
                                 style: GoogleFonts.roboto(
                                   fontSize: 20,
-                                  color: Colors.blueAccent.shade700,
+                                  color: Color.fromARGB(255, 0, 0, 0),
                                 ),
                               ),
                             ),
                             TextButton(
                               style: TextButton.styleFrom(
-                                backgroundColor: Colors.blueAccent.shade700,
+                                backgroundColor: Colors.blueGrey.shade700,
                                 minimumSize: Size(120, 50),
                               ),
                               onPressed: () async {
@@ -130,7 +132,7 @@ class _LoginPageState extends State<LoginPage> {
                       .login(context, txtEmail.text, txtSenha.text);
                 },
                 style: ElevatedButton.styleFrom(
-                  primary: Colors.blueAccent.shade700,
+                  primary: Colors.blueGrey.shade700,
                   minimumSize:
                       Size(MediaQuery.of(context).size.width * 0.9, 60),
                   shape: RoundedRectangleBorder(
@@ -153,7 +155,7 @@ class _LoginPageState extends State<LoginPage> {
                       "Novo usuário?",
                       style: GoogleFonts.roboto(
                         fontSize: 16,
-                        color: Colors.blueAccent.shade700,
+                        color: Color.fromARGB(255, 0, 0, 0),
                       ),
                     ),
                     onPressed: () =>

@@ -36,7 +36,7 @@ class _CriarContaPageState extends State<CriarContaPage> {
                       'Criar conta',
                       style: GoogleFonts.roboto(
                         fontSize: 50,
-                        color: Colors.blueAccent.shade700,
+                        color: Color.fromARGB(255, 65, 121, 100),
                         fontWeight: FontWeight.bold,
                       ),
                     ),
@@ -56,7 +56,7 @@ class _CriarContaPageState extends State<CriarContaPage> {
                     context, txtNome.text, txtEmail.text, txtSenha.text);
               },
               style: ElevatedButton.styleFrom(
-                primary: Colors.blueAccent.shade700,
+                primary: Color.fromARGB(255, 65, 121, 100),
                 minimumSize: Size(MediaQuery.of(context).size.width * 0.9, 60),
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(20.0),
@@ -78,7 +78,7 @@ class _CriarContaPageState extends State<CriarContaPage> {
                     "Cancelar",
                     style: GoogleFonts.roboto(
                       fontSize: 16,
-                      color: Colors.blueAccent.shade700,
+                      color: Color.fromARGB(255, 0, 0, 0),
                     ),
                   ),
                   onPressed: () => {Navigator.pop(context)},
