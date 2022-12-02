@@ -40,7 +40,7 @@ class DivTeamWidget extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Text(
-                'Equipe',
+                '',
                 style: TextStyle(fontSize: 20.0),
               ),
               GestureDetector(

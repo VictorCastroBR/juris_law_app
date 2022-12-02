@@ -45,6 +45,7 @@ class MenuPageState extends State<MenuPage> {
             child: Column(
               children: [
                 Expanded(flex: 1, child: UserHeader()),
+                Text('Áreas de atuação'),
                 Expanded(
                   flex: 9,
                   child: ExpansionAreaWidget(),
@@ -62,7 +63,7 @@ class MenuPageState extends State<MenuPage> {
               builder: (BuildContext context) {
                 // retorna um objeto do tipo Dialog
                 return AlertDialog(
-                  title: const Text("Alterar nome"),
+                  title: const Text("Insira a área"),
                   content: SingleChildScrollView(
                     child: ListBody(
                       children: [
